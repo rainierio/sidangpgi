@@ -6,30 +6,30 @@
             <nav>
                 <ul>
                     <li>
-                        <a href="https://www.creative-tim.com">
-                            Creative Tim
+                        <a href="">
+                            Beranda
                         </a>
                     </li>
                     <li>
-                        <a href="https:///presentation.creative-tim.com">
-                            About Us
+                        <a href="">
+                            Tentang Kami
                         </a>
                     </li>
                     <li>
-                        <a href="https:///blog.creative-tim.com">
+                        <a href="">
                             Blog
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.creative-tim.com/license">
-                            Licenses
+                        <a href="">
+                            Pendanaan
                         </a>
                     </li>
                 </ul>
             </nav>
             <div class="copyright">
-                &copy; {{year}}, made with <md-icon>favorite</md-icon> by
-                <a href="https://www.creative-tim.com/" target="_blank">Creative Tim</a> for a better web.
+                &copy; {{year}}, crafted with <md-icon>favorite</md-icon> by
+                <a href="" target="_blank">rainierio</a>
             </div>
         </div>
     </footer>
