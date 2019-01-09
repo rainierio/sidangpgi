@@ -1,14 +1,19 @@
 <template>
   <div class="wrapper">
-    <parallax class="section page-header header-filter" :style="headerStyle">
-      <div class="container">
-        <div class="md-layout">
-    			<div class="md-layout-item md-size-50 md-small-size-70 md-xsmall-size-100">
-    				<h1 class="title">Your Story Starts With Us.</h1>
-              <h4>Every landing page needs a small description after the big bold title, that's why we added this text here. Add here all the information that can make you or your product create the first impression.</h4>
-              <br>
-              <md-button href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="md-success md-lg" target="_blank"><i class="fas fa-play"></i> Watch video</md-button>
-    			</div>
+    <parallax class="page-header header-filter" :style="headerStyle">
+      <div class="md-layout">
+        <div class="md-layout-item">
+          <div class="image-wrapper">
+            <img :src="leaf4" alt="leaf4" class="leaf4" v-show="leafShow">
+            <img :src="leaf3" alt="leaf3" class="leaf3" v-show="leafShow">
+            <img :src="leaf2" alt="leaf2" class="leaf2" v-show="leafShow">
+            <img :src="leaf1" alt="leaf1" class="leaf1" v-show="leafShow">
+            <div class="brand">
+              <h1>Sidang Raya PGI XVII 2019</h1>
+              <h3>Sumba Timur - Sumba Tengah - Sumba Barat - Sumba Barat Daya</h3>
+            </div>
+          </div>
+
         </div>
       </div>
     </parallax>
@@ -187,7 +192,14 @@
 </template>
 
 <script>
+import TypographyImages from "./components/TypographyImagesSection";
+import JavascriptComponents from "./components/JavascriptComponentsSection";
+
 export default {
+  components: {
+    TypographyImages,
+    JavascriptComponents,
+  },
   bodyClass: "landing-page",
   props: {
     header: {
@@ -205,21 +217,65 @@ export default {
     teamImg3: {
       type: String,
       default: require("@/assets/img/faces/kendall.jpg")
-    }
+    },
+    image: {
+      type: String,
+      default: require("@/assets/img/vue-mk-header.jpg")
+    },
+    leaf4: {
+      type: String,
+      default: require("@/assets/img/leaf4.png")
+    },
+    leaf3: {
+      type: String,
+      default: require("@/assets/img/leaf3.png")
+    },
+    leaf2: {
+      type: String,
+      default: require("@/assets/img/leaf2.png")
+    },
+    leaf1: {
+      type: String,
+      default: require("@/assets/img/leaf1.png")
+    },
+        landing: {
+      type: String,
+      default: require("@/assets/img/landing.jpg")
+    },
   },
   data() {
     return {
       name: null,
       email: null,
-      message: null
+      message: null,
+      firstname: null,
+      email: null,
+      password: null,
+      leafShow: false
     };
+  },
+  methods: {
+    leafActive() {
+      if (window.innerWidth < 768) {
+        this.leafShow = false;
+      } else {
+        this.leafShow = true;
+      }
+    }
   },
   computed: {
     headerStyle() {
       return {
-        backgroundImage: `url(${this.header})`
+        backgroundImage: `url(${this.image})`
       };
     }
+  },
+  mounted() {
+    this.leafActive();
+    window.addEventListener("resize", this.leafActive);
+  },
+  beforeDestroy() {
+    window.removeEventListener("resize", this.leafActive);
   }
 };
 </script>
@@ -235,5 +291,11 @@ export default {
 
 .md-has-textarea + .md-layout {
   margin-top: 15px;
+}
+
+@media all and (min-width: 991px) {
+  .btn-container {
+    display: flex;
+  }
 }
 </style>

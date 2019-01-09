@@ -8,6 +8,9 @@ import Profile from "./views/Profile.vue";
 import MainNavbar from "./layout/MainNavbar.vue";
 import MainFooter from "./layout/MainFooter.vue";
 
+//Sidang Raya import
+import tentang from "./views/tentang.vue";
+
 Vue.use(Router);
 
 export default new Router({
@@ -55,7 +58,16 @@ export default new Router({
         header: { colorOnScroll: 400 },
         footer: { backgroundColor: "black" }
       }
+    },
+    {
+      path: "/tentang",
+      name: "tentang",
+      components: { default: tentang, header: MainNavbar, footer: MainFooter },
+      props: {
+        header: { colorOnScroll: 400 },
+        footer: { backgroundColor: "black" }
     }
+  }
   ],
   scrollBehavior: to => {
     if (to.hash) {

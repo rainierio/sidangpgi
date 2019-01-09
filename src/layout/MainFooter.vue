@@ -17,7 +17,7 @@
                     </li>
                     <li>
                         <a href="">
-                            Blog
+                            Kegiatan
                         </a>
                     </li>
                     <li>
@@ -28,8 +28,7 @@
                 </ul>
             </nav>
             <div class="copyright">
-                &copy; {{year}}, crafted with <md-icon>favorite</md-icon> by
-                <a href="" target="_blank">rainierio</a>
+                &copy; {{year}}
             </div>
         </div>
     </footer>
