@@ -10,6 +10,9 @@ import MainFooter from "./layout/MainFooter.vue";
 
 //Sidang Raya import
 import tentang from "./views/tentang.vue";
+import kegiatan from "./views/kegiatan.vue";
+import pendanaan from "./views/pendanaan.vue";
+import press from "./views/press.vue";
 
 Vue.use(Router);
 
@@ -59,6 +62,8 @@ export default new Router({
         footer: { backgroundColor: "black" }
       }
     },
+
+    //Sidang Raya PGI Router
     {
       path: "/tentang",
       name: "tentang",
@@ -66,8 +71,36 @@ export default new Router({
       props: {
         header: { colorOnScroll: 400 },
         footer: { backgroundColor: "black" }
+      }
+    },
+  {
+      path: "/kegiatan",
+      name: "kegiatan",
+      components: { default: kegiatan, header: MainNavbar, footer: MainFooter },
+      props: {
+        header: { colorOnScroll: 400 },
+        footer: { backgroundColor: "black" }
     }
-  }
+  },
+  {
+    path: "/pendanaan",
+    name: "pendanaan",
+    components: { default: pendanaan, header: MainNavbar, footer: MainFooter },
+    props: {
+      header: { colorOnScroll: 400 },
+      footer: { backgroundColor: "black" }
+    }
+  },
+  {
+    path: "/press",
+    name: "press",
+    components: { default: press, header: MainNavbar, footer: MainFooter },
+    props: {
+      header: { colorOnScroll: 400 },
+      footer: { backgroundColor: "black" }
+    }
+  } 
+
   ],
   scrollBehavior: to => {
     if (to.hash) {

@@ -11,7 +11,7 @@
                 </div>
                 <div class="name">
                   <br><br><br><br>
-                  <h3 class="md-headline">Tentan Sidang Raya PGI XVII</h3>
+                  <h3 class="md-headline">Press</h3>
                 </div>
               </div>
             </div>

@@ -2,7 +2,7 @@
   <md-toolbar id="toolbar" md-elevation="0" class="md-transparent md-absolute" :class="extraNavClasses" :color-on-scroll="colorOnScroll">
     <div class="md-toolbar-row md-collapse-lateral">
       <div class="md-toolbar-section-start">
-        <h3 class="md-title">Sidang Raya PGI</h3>
+        <h2 class="md-title"> Sidang Raya PGI XVII </h2>
       </div>
       <div class="md-toolbar-section-end">
         <md-button class="md-just-icon md-simple md-toolbar-toggle" :class="{toggled: toggledClass}" @click="toggleNavbarMobile()">
@@ -35,7 +35,7 @@
 
               <md-list-item>
                 <p>
-                  <router-link to="/jadwalkegiatan" exact> 
+                  <router-link to="/kegiatan" exact> 
                     Jadwal Kegiatan
                   </router-link>
                 </p>
@@ -44,15 +44,15 @@
               <md-list-item>
                 <p> 
                   <router-link to="/pendanaan" exact> 
-                    Pendanaan 
+                    Anggaran & Pendanaan 
                   </router-link> 
                 </p>
               </md-list-item>
 
               <md-list-item>
                 <p> 
-                  <router-link to="/blog" exact> 
-                    Blog 
+                  <router-link to="/press" exact> 
+                    Press 
                   </router-link> 
                 </p>
               </md-list-item>

@@ -11,7 +11,7 @@
                 </div>
                 <div class="name">
                   <br><br><br><br>
-                  <h3 class="md-headline">Tentan Sidang Raya PGI XVII</h3>
+                  <h3 class="md-headline">Kegiatan Sidang Raya PGI XVII</h3>
                 </div>
               </div>
             </div>
@@ -20,7 +20,6 @@
             <p>An artist of considerable range, Chet Faker — the name taken by Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs and records all of his own music, giving it a warm, intimate feel with a solid groove structure. </p>
           </div>
           <br> <br> <br> <br>
-
         </div>
       </div>
     </div>

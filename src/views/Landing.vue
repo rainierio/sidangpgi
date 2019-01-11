@@ -22,8 +22,8 @@
         <div class="container">
           <div class="md-layout">
             <div class="md-layout-item md-size-66 md-xsmall-size-100 mx-auto text-center">
-              <h2 class="title text-center">Let's talk product</h2>
-              <h5 class="description">This is the paragraph where you can write more details about your product. Keep you user engaged by providing meaningful information. Remember that by this time, the user is curious, otherwise he wouldn't scroll to get here. Add a button if you want the user to see more.</h5>
+              <h2 class="title text-center">Kegiatan Pra Sidang Raya dan Sidang Raya</h2>
+              <h5 class="description">Penyelenggaraan Sidang Raya XVII PGI tahun 2019, akan didahului oleh pertemuan Pra Sidang Raya yaitu Pertemuan Raya Perempuan Gereja, Pertemuan Raya Pemuda Gereja dan Sidang Majelis Pekerja Lengkap (MPL) PGI</h5>
             </div>
           </div>
           <div class="features text-center">
@@ -33,8 +33,8 @@
                   <div class="icon icon-info">
                     <md-icon>chat</md-icon>
                   </div>
-                  <h4 class="info-title">Free Chat</h4>
-                  <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
+                  <h4 class="info-title">Pertemuan Raya Perempuan Gereja</h4>
+                  <p>Pertemuan Raya Perempuan Gereja merupakan Pertemuan Oikumenis dan Selebrasi iman dari para  perempuan gereja dari berbagai latar belakang daerah, budaya, dan denominasi gereja.</p>
                 </div>
               </div>
               <div class="md-layout-item md-medium-size-33 md-small-size-100">
@@ -42,8 +42,8 @@
                     <div class="icon icon-success">
                       <md-icon>verified_user</md-icon>
                     </div>
-                    <h4 class="info-title">Verified Users</h4>
-                    <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
+                    <h4 class="info-title">Pertemuan Raya Pemuda Gereja</h4>
+                    <p>Pertemuan Raya Pemuda Gereja merupakan Pertemuan Oikumenis dan Selebrasi iman dari para  pemuda gereja dari berbagai latar belakang daerah, budaya, dan denominasi gereja. </p>
                   </div>
               </div>
               <div class="md-layout-item md-medium-size-33 md-small-size-100">
@@ -51,8 +51,8 @@
                     <div class="icon icon-danger">
                       <md-icon>fingerprint</md-icon>
                     </div>
-                    <h4 class="info-title">Fingerprint</h4>
-                    <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
+                    <h4 class="info-title">Sidang Majelis Pekerja Lengkap PGI</h4>
+                    <p>Sidang Majelis Pekerja Lengkap PGI merupakan Pertemuan Pimpinan Sinode Gereja Anggota PGI. Sidang Majelis Pekerja Lengkap PGI akan didahului oleh persidangan Majelis Pekerja Harian PGI (MPH PGI).</p>
                   </div>
               </div>
             </div>
@@ -61,7 +61,7 @@
       </div>
       <div class="section text-center">
         <div class="container">
-          <h2 class="title">Here is our team</h2>
+          <h2 class="title">Sekilas tentang pulau Sumba</h2>
           <div class="team">
               <div class="md-layout">
                   <div class="md-layout-item md-medium-size-33 md-small-size-100">
@@ -70,26 +70,15 @@
                         <div class="md-layout-item md-size-50 mx-auto">
                           <img :src="teamImg1" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
                         </div>
-                        <h4 class="card-title">Gigi Hadid
+                        <h4 class="card-title">Sumba Timur
                           <br>
-                          <small class="card-description text-muted">Model</small>
+                          <small class="card-description text-muted">Waingapu</small>
                         </h4>
 
                         <md-card-content>
                           <p class="card-description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some <a href="#">links</a> for people to be able to follow them outside the site.</p>
                         </md-card-content>
 
-                        <md-card-actions class="text-center">
-                          <md-button href="javascript:void(0)" class="md-just-icon md-simple">
-                            <i class="fab fa-twitter"></i>
-                          </md-button>
-                          <md-button href="javascript:void(0)" class="md-just-icon md-simple">
-                            <i class="fab fa-instagram"></i>
-                          </md-button>
-                          <md-button href="javascript:void(0)" class="md-just-icon md-simple">
-                            <i class="fab fa-facebook-square"></i>
-                          </md-button>
-                        </md-card-actions>
                       </md-card>
                     </div>
                   </div>
@@ -99,23 +88,15 @@
                         <div class="md-layout-item md-size-50 mx-auto">
                           <img :src="teamImg2" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
                         </div>
-                        <h4 class="card-title">Carla Hortensia
+                        <h4 class="card-title">Sumba Tengah
                           <br>
-                          <small class="card-description text-muted">Designer</small>
+                          <small class="card-description text-muted">Waibakul</small>
                         </h4>
 
                         <md-card-content>
                           <p class="card-description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some <a href="#">links</a> for people to be able to follow them outside the site.</p>
                         </md-card-content>
 
-                        <md-card-actions class="text-center">
-                          <md-button href="javascript:void(0)" class="md-just-icon md-simple">
-                            <i class="fab fa-twitter"></i>
-                          </md-button>
-                          <md-button href="javascript:void(0)" class="md-just-icon md-simple">
-                            <i class="fab fa-linkedin"></i>
-                          </md-button>
-                        </md-card-actions>
                       </md-card>
                     </div>
                   </div>
@@ -125,26 +106,32 @@
                         <div class="md-layout-item md-size-50 mx-auto">
                           <img :src="teamImg3" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
                         </div>
-                        <h4 class="card-title">Kendall Jenner
+                        <h4 class="card-title">Sumba Barat
                           <br>
-                          <small class="card-description text-muted">Model</small>
+                          <small class="card-description text-muted">Waikabubak</small>
+                        </h4>
+
+                        <md-card-content>
+                          <p class="card-description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some <a href="#">links</a> for people to be able to follow them outside the site.</p>
+                        </md-card-content>                
+                      </md-card>
+                    </div>
+                  </div>
+                  <div class="md-layout-item md-medium-size-33 md-small-size-100">
+                    <div class="team-player">
+                      <md-card class="md-card-plain">
+                        <div class="md-layout-item md-size-50 mx-auto">
+                          <img :src="teamImg2" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
+                        </div>
+                        <h4 class="card-title">Sumba Barat Daya
+                          <br>
+                          <small class="card-description text-muted">Tambolaka</small>
                         </h4>
 
                         <md-card-content>
                           <p class="card-description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some <a href="#">links</a> for people to be able to follow them outside the site.</p>
                         </md-card-content>
 
-                        <md-card-actions class="text-center">
-                          <md-button href="javascript:void(0)" class="md-just-icon md-simple">
-                            <i class="fab fa-twitter"></i>
-                          </md-button>
-                          <md-button href="javascript:void(0)" class="md-just-icon md-simple">
-                            <i class="fab fa-instagram"></i>
-                          </md-button>
-                          <md-button href="javascript:void(0)" class="md-just-icon md-simple">
-                            <i class="fab fa-facebook-square"></i>
-                          </md-button>
-                        </md-card-actions>
                       </md-card>
                     </div>
                   </div>
@@ -156,7 +143,7 @@
         <div class="container">
           <div class="md-layout">
             <div class="md-layout-item md-size-66 md-xsmall-size-100 mx-auto">
-              <h2 class="text-center title">Work with us</h2>
+              <h2 class="text-center title">Hubungi Kami</h2>
               <h4 class="text-center description">Divide details about your product or agency work into parts. Write a few lines about each one and contact us about any further collaboration. We will responde get back to you in a couple of hours.</h4>
               <form class="contact-form">
                   <div class="md-layout">
@@ -238,7 +225,7 @@ export default {
       type: String,
       default: require("@/assets/img/leaf1.png")
     },
-        landing: {
+      landing: {
       type: String,
       default: require("@/assets/img/landing.jpg")
     },
@@ -249,9 +236,7 @@ export default {
       email: null,
       message: null,
       firstname: null,
-      email: null,
-      password: null,
-      leafShow: false
+
     };
   },
   methods: {
