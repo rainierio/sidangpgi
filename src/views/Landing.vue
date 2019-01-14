@@ -242,11 +242,10 @@ export default {
     };
   },
   created() {
-      this.$http.get('https://sidangpgi.firebaseio.com/landingHeader.json').then(function(data){
+      this.$http.get('https://sidangpgi.firebaseio.com/landingHeader.json',).then(function(data){
           return data.json()
       }).then(function(data){
-          this.landingHeader = data;
-          console.log(this.landingHeader);
+          console.log(data);
       });
   },
   methods: {
