@@ -175,6 +175,7 @@
 </template>
 
 <script>
+import { firestore } from '../main'
 import TypographyImages from "./components/TypographyImagesSection";
 import JavascriptComponents from "./components/JavascriptComponentsSection";
 
@@ -218,10 +219,7 @@ export default {
       firstname: null,
       
       //Object for landing
-      landingHeader:  {
-        title: null,
-        desc: null,
-      },
+      landingHeader: [],
 
       landingTab1: {
         img:  null,
@@ -242,11 +240,12 @@ export default {
     };
   },
   created() {
-      this.$http.get('https://sidangpgi.firebaseio.com/landingHeader.json',).then(function(data){
-          return data.json()
-      }).then(function(data){
-          console.log(data);
-      });
+
+  },
+  firestore () {
+    return {
+      landingHeader: firestore.collection('landingHeader')
+    }
   },
   methods: {
 

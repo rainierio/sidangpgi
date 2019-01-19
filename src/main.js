@@ -1,4 +1,5 @@
 import Vue from "vue";
+import VueFirestore from "vue-firestore";
 import firebase from "firebase/app";
 import "firebase/firestore";
 import App from "./App.vue";
@@ -7,6 +8,10 @@ import MaterialKit from "./plugins/material-kit";
 import VueResource from "vue-resource";
 
 Vue.config.productionTip = false;
+
+Vue.use(MaterialKit);
+Vue.use(VueResource);
+Vue.use(VueFirestore);
 
 //Initialize Firebase
 var config = {
@@ -17,10 +22,13 @@ var config = {
   storageBucket: "sidangpgi.appspot.com",
   messagingSenderId: "428332652949"
 };
-firebase.initializeApp(config);
 
-Vue.use(MaterialKit);
-Vue.use(VueResource);
+var firebaseApp = firebase.initializeApp(config);
+const settings = {timestampsInSnapshots:true};
+const fireStore = firebaseApp.firestore();
+fireStore.settings(settings);
+
+export const firestore = fireStore;
 
 const NavbarStore = {
   showNavbar: false
