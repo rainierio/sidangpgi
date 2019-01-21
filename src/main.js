@@ -25,10 +25,10 @@ var config = {
 
 var firebaseApp = firebase.initializeApp(config);
 const settings = {timestampsInSnapshots:true};
-const fireStore = firebaseApp.firestore();
-fireStore.settings(settings);
+const firestore = firebaseApp.firestore();
+firestore.settings(settings);
 
-export const firestore = fireStore;
+export const db = firestore;
 
 const NavbarStore = {
   showNavbar: false

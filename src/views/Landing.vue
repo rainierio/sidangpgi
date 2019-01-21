@@ -4,52 +4,34 @@
       <div class="md-layout">
         <div class="md-layout-item">
           <div class="image-wrapper">
-            <div class="brand">
-              <h1> {{ landingHeader.title }} </h1>
-              <h3> {{ landingHeader.desc }} </h3>
+            <div class="brand landing-header-Font" v-for="header in landingHeader" align="center">
+                <h1> <strong>{{ header.title }} </strong> </h1>
+                <h3>  {{ header.desc }}  </h3>
             </div>
           </div>
-
         </div>
       </div>
     </parallax>
     <div class="main main-raised">
       <div class="section">
         <div class="container">
-          <div class="md-layout">
+          <div class="md-layout" v-for="title in landingHeader">
             <div class="md-layout-item md-size-66 md-xsmall-size-100 mx-auto text-center">
-              <h2 class="title text-center">Kegiatan Pra Sidang Raya dan Sidang Raya</h2>
-              <h5 class="description">Penyelenggaraan Sidang Raya XVII PGI tahun 2019, akan didahului oleh pertemuan Pra Sidang Raya yaitu Pertemuan Raya Perempuan Gereja, Pertemuan Raya Pemuda Gereja dan Sidang Majelis Pekerja Lengkap (MPL) PGI</h5>
+              <h2 class="title text-center"> {{ title.longTitle }}</h2>
+              <h5 class="description"> {{ title.longDesc }} </h5>
             </div>
           </div>
           <div class="features text-center">
             <div class="md-layout">
-              <div class="md-layout-item md-medium-size-33 md-small-size-100">
+              <div class="md-layout-item md-medium-size-33 md-small-size-100" v-for="tab1 in landingTab1">
                 <div class="info">
                   <div class="icon icon-info">
-                    <md-icon>chat</md-icon>
+                    <md-icon> {{ tab1.icon }} </md-icon>
                   </div>
-                  <h4 class="info-title">Pertemuan Raya Perempuan Gereja</h4>
-                  <p>Pertemuan Raya Perempuan Gereja merupakan Pertemuan Oikumenis dan Selebrasi iman dari para  perempuan gereja dari berbagai latar belakang daerah, budaya, dan denominasi gereja.</p>
+                  <h4 class="info-title"> {{ tab1.title }} </h4>
+                  <p> {{ tab1.desc }} </p>
+                  <a v-bind:href="tab1.readMore"> <md-button class="md-info md-round md-sm">Lebih Lanjut</md-button> </a>
                 </div>
-              </div>
-              <div class="md-layout-item md-medium-size-33 md-small-size-100">
-                  <div class="info">
-                    <div class="icon icon-success">
-                      <md-icon>verified_user</md-icon>
-                    </div>
-                    <h4 class="info-title">Pertemuan Raya Pemuda Gereja</h4>
-                    <p>Pertemuan Raya Pemuda Gereja merupakan Pertemuan Oikumenis dan Selebrasi iman dari para  pemuda gereja dari berbagai latar belakang daerah, budaya, dan denominasi gereja. </p>
-                  </div>
-              </div>
-              <div class="md-layout-item md-medium-size-33 md-small-size-100">
-                  <div class="info">
-                    <div class="icon icon-danger">
-                      <md-icon>fingerprint</md-icon>
-                    </div>
-                    <h4 class="info-title">Sidang Majelis Pekerja Lengkap PGI</h4>
-                    <p>Sidang Majelis Pekerja Lengkap PGI merupakan Pertemuan Pimpinan Sinode Gereja Anggota PGI. Sidang Majelis Pekerja Lengkap PGI akan didahului oleh persidangan Majelis Pekerja Harian PGI (MPH PGI).</p>
-                  </div>
               </div>
             </div>
           </div>
@@ -175,7 +157,7 @@
 </template>
 
 <script>
-import { firestore } from '../main'
+import { db } from '../main'
 import TypographyImages from "./components/TypographyImagesSection";
 import JavascriptComponents from "./components/JavascriptComponentsSection";
 
@@ -220,23 +202,8 @@ export default {
       
       //Object for landing
       landingHeader: [],
-
-      landingTab1: {
-        img:  null,
-        title: null,
-        desc: null,
-        readMore: null,
-        index: null
-      },
-
-      landingTab2: {
-        img:  null,
-        title: null,
-        desc: null,
-        readMore: null,
-        index: null
-      },
-
+      landingTab1: [],
+      landingTab2: []
     };
   },
   created() {
@@ -244,7 +211,8 @@ export default {
   },
   firestore () {
     return {
-      landingHeader: firestore.collection('landingHeader')
+      landingHeader: db.collection('landingHeader'),
+      landingTab1: db.collection('landingTab1').orderBy('index'),
     }
   },
   methods: {
@@ -258,7 +226,7 @@ export default {
     }
   },
   mounted() {
-
+    
   },
   beforeDestroy() {
 
@@ -268,6 +236,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+.landing-header-Font{
+    color: white;
+    text-transform: uppercase;
+    font-weight: weight-bold;
+}
+
 .md-card-actions.text-center {
   display: flex;
   justify-content: center !important;
