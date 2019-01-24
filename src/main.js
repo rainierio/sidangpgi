@@ -2,6 +2,7 @@ import Vue from "vue";
 import VueFirestore from "vue-firestore";
 import firebase from "firebase/app";
 import "firebase/firestore";
+import "firebase/storage";
 import App from "./App.vue";
 import router from "./router";
 import MaterialKit from "./plugins/material-kit";
@@ -27,8 +28,10 @@ var firebaseApp = firebase.initializeApp(config);
 const settings = {timestampsInSnapshots:true};
 const firestore = firebaseApp.firestore();
 firestore.settings(settings);
+const firestorage = firebaseApp.storage();
 
 export const db = firestore;
+export const storage = firestorage;
 
 const NavbarStore = {
   showNavbar: false
